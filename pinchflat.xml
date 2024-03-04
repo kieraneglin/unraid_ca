@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Pinchflat</Name>
+  <Repository>keglin/pinchflat:latest</Repository>
+  <Registry>https://hub.docker.com/r/keglin/pinchflat</Registry>
+  <Network>bridge</Network>
+  <MyIP />
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/kieraneglin/pinchflat</Support>
+  <Project>https://github.com/kieraneglin/pinchflat</Project>
+  <Overview>
+    **This is a pre-release of Pinchflat. Things will change and may break. Use at your own
+    risk**&#xD;&#xD;
+    Pinchflat is a lightweight and self-contained tool for automatically downloading and organizing
+    media from YouTube
+  </Overview>
+  <Beta>True</Beta>
+  <Category>Backup: Downloaders: MediaApp:Video MediaServer:Video</Category>
+  <WebUI>http://[IP]:[PORT:8945]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/kieraneglin/unraid_ca/master/pinchflat.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/kieraneglin/unraid_ca/master/images/pinchflat_icon.png</Icon>
+  <ExtraParams>--user 99:100</ExtraParams>
+  <PostArgs />
+  <CPUset />
+  <Changes>
+    See Github repository for changelog: https://github.com/kieraneglin/pinchflat
+  </Changes>
+  <DonateText />
+  <DonateLink />
+  <Requires />
+  <Config
+    Name="Config Path"
+    Target="/config"
+    Default="/mnt/user/appdata/pinchflat"
+    Mode="rw"
+    Description="Pinchflat config storage path. Default is /mnt/user/appdata/pinchflat"
+    Type="Path"
+    Display="always"
+    Required="true"
+    Mask="false">/mnt/user/appdata/pinchflat</Config>
+
+  <Config
+    Name="Download Path"
+    Target="/downloads"
+    Default=""
+    Mode="rw"
+    Description="Path to store downloaded media. Ideally separate from your other media while Pinchflat is in pre-release."
+    Type="Path"
+    Display="always"
+    Required="true"
+    Mask="false" />
+
+  <Config
+    Name="Web UI Port"
+    Target="8945"
+    Default="8945"
+    Mode="tcp"
+    Description="Pinchflat web UI port. Default is 8945"
+    Type="Port"
+    Display="always"
+    Required="true"
+    Mask="false">8945</Config>
+
+  <Config
+    Name="Auth Username"
+    Target="BASIC_AUTH_USERNAME"
+    Default=""
+    Mode=""
+    Description="The username for HTTP basic authentication. Leave blank to disable. Default is blank"
+    Type="Variable"
+    Display="always"
+    Required="false"
+    Mask="false" />
+
+  <Config
+    Name="Auth Password"
+    Target="BASIC_AUTH_PASSWORD"
+    Default=""
+    Mode=""
+    Description="The password for HTTP basic authentication. Leave blank to disable. Default is blank"
+    Type="Variable"
+    Display="always"
+    Required="false"
+    Mask="false" />
+</Container>
