@@ -83,4 +83,15 @@
     Display="always"
     Required="false"
     Mask="false" />
+
+  <Config
+    Name="Log Level"
+    Target="LOG_LEVEL"
+    Default="info"
+    Mode=""
+    Description="Set to debug for more verbose logging or when troubleshooting. Default is info"
+    Type="Variable"
+    Display="advanced"
+    Required="true"
+    Mask="false" />
 </Container>
