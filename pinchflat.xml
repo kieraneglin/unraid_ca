@@ -2,7 +2,7 @@
 <Container version="2">
   <Name>Pinchflat</Name>
   <Repository>ghcr.io/kieraneglin/pinchflat:latest</Repository>
-  <Registry>https://hub.docker.com/r/keglin/pinchflat</Registry>
+  <Registry>https://github.com/kieraneglin/pinchflat/pkgs/container/pinchflat</Registry>
   <Network>bridge</Network>
   <MyIP />
   <Shell>bash</Shell>
