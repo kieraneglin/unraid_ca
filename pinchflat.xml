@@ -93,4 +93,15 @@
     Display="advanced"
     Required="true"
     Mask="false" />
+
+  <Config
+    Name="Expose Feed Endpoints"
+    Target="EXPOSE_FEED_ENDPOINTS"
+    Default=""
+    Mode=""
+    Description="Set to any value to expose feed endpoints. See docs on RSS feeds for explanation. Default is blank"
+    Type="Variable"
+    Display="advanced"
+    Required="false"
+    Mask="false" />
 </Container>
