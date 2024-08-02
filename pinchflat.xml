@@ -14,7 +14,6 @@
     **This is a pre-release of Pinchflat. Things will change and may break. Use at your own risk**&#xD;&#xD;
     Pinchflat is a lightweight and self-contained tool for automatically downloading and organizing media from YouTube
   </Overview>
-  <Beta>True</Beta>
   <Category>Backup: Downloaders: MediaApp:Video MediaServer:Video</Category>
   <WebUI>http://[IP]:[PORT:8945]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/kieraneglin/unraid_ca/master/pinchflat.xml</TemplateURL>
@@ -44,7 +43,7 @@
     Target="/downloads"
     Default=""
     Mode="rw"
-    Description="Path to store downloaded media. Ideally separate from your other media while Pinchflat is in pre-release."
+    Description="Path to store downloaded media. Ideally separate from your other media like TV shows."
     Type="Path"
     Display="always"
     Required="true"

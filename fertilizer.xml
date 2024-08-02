@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>fertilizer</Name>
+  <Repository>ghcr.io/moleculekayak/fertilizer:latest</Repository>
+  <Registry>https://github.com/moleculekayak/fertilizer/pkgs/container/fertilizer</Registry>
+  <Network>bridge</Network>
+  <MyIP />
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/moleculekayak/fertilizer/issues</Support>
+  <Project>https://github.com/moleculekayak/fertilizer</Project>
+  <Overview>fertilizer is a cross-seeding tool for RED and OPS. Based on and inspired by crops.&#xD;
+&#xD;
+!! IMPORTANT !!&#xD;
+1. Click "Basic View" in the upper right&#xD;
+2. Edit the "-o" flag in "Post Arguments" to match your preferences.&#xD;
+&#xD;
+The default is good for most users, but you should be aware of it. See the docs on installation for more info: https://github.com/moleculekayak/fertilizer/wiki&#xD;
+  </Overview>
+  <Beta>True</Beta>
+  <Category>Downloaders: Other:</Category>
+  <WebUI>http://[IP]:[PORT:9713]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/kieraneglin/unraid_ca/master/fertilizer.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/kieraneglin/unraid_ca/master/images/fertilizer_icon.png</Icon>
+  <ExtraParams>--user 99:100</ExtraParams>
+  <PostArgs>"fertilizer -o /data/fertilizer/torrent-files -i /torrents -c /config/config.json --server"</PostArgs>
+  <CPUset />
+  <Changes>See Github repository for changelog: https://github.com/moleculekayak/fertilizer/releases</Changes>
+  <DonateText />
+  <DonateLink />
+  <Requires />
+
+  <Config
+    Name="Config Path"
+    Target="/config"
+    Default="/mnt/user/appdata/fertilizer"
+    Mode="rw"
+    Description="fertilizer config storage path. Default is /mnt/user/appdata/fertilizer"
+    Type="Path"
+    Display="always"
+    Required="true"
+    Mask="false">/mnt/user/appdata/fertilizer</Config>
+
+  <Config
+    Name="Data Path"
+    Target="/data"
+    Default=""
+    Mode="rw"
+    Description="Path to store generated .torrent files and linked torrent data. Read the installation docs for important info."
+    Type="Path"
+    Display="always"
+    Required="true"
+    Mask="false" />
+
+  <Config
+    Name="Torrents Path"
+    Target="/torrents"
+    Default=""
+    Mode="rw"
+    Description="Path where your torrent client stores its in-progress torrents. This is the 'state' folder in Deluge or the 'BT_backup' folder in qBittorrent."
+    Type="Path"
+    Display="always"
+    Required="true"
+    Mask="false" />
+
+  <Config
+    Name="Web Port"
+    Target="9713"
+    Default="9713"
+    Mode="tcp"
+    Description="Web port for server mode. Default is 9713"
+    Type="Port"
+    Display="always"
+    Required="true"
+    Mask="false">9713</Config>
+</Container>
