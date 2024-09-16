@@ -114,4 +114,37 @@
     Display="advanced"
     Required="false"
     Mask="false" />
+
+  <Config
+    Name="Enable IPv6"
+    Target="ENABLE_IPV6"
+    Default=""
+    Mode=""
+    Description="Set to any non-blank value to enable IPv6. Default is blank"
+    Type="Variable"
+    Display="advanced"
+    Required="false"
+    Mask="false" />
+
+  <Config
+    Name="yt-dlp Worker Concurrency"
+    Target="YT_DLP_WORKER_CONCURRENCY"
+    Default="2"
+    Mode=""
+    Description="The number of concurrent workers that use yt-dlp per queue. Set to 1 if you're getting IP limited, otherwise don't touch it"
+    Type="Variable"
+    Display="advanced"
+    Required="false"
+    Mask="false" />
+
+  <Config
+    Name="Base route path"
+    Target="BASE_ROUTE_PATH"
+    Default="/"
+    Mode=""
+    Description="The base path for route generation. Useful when running behind certain reverse proxies"
+    Type="Variable"
+    Display="advanced"
+    Required="false"
+    Mask="false" />
 </Container>
