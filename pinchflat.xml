@@ -11,8 +11,10 @@
   <Project>https://github.com/kieraneglin/pinchflat</Project>
   <Overview>
     Pinchflat is your next YouTube media manager&#xD;&#xD;
-    **This is a pre-release of Pinchflat. Things will change and may break. Use at your own risk**&#xD;&#xD;
-    Pinchflat is a lightweight and self-contained tool for automatically downloading and organizing media from YouTube
+    **This is a pre-release of Pinchflat. Things will change and may break. Use at your own
+    risk**&#xD;&#xD;
+    Pinchflat is a lightweight and self-contained tool for automatically downloading and organizing
+    media from YouTube
   </Overview>
   <Category>Backup: Downloaders: MediaApp:Video MediaServer:Video</Category>
   <WebUI>http://[IP]:[PORT:8945]/</WebUI>
@@ -88,6 +90,28 @@
     Default="America/New_York"
     Mode=""
     Description="Your local timezone"
+    Type="Variable"
+    Display="always"
+    Required="false"
+    Mask="false" />
+
+  <Config
+    Name="Enable Prometheus Metrics"
+    Target="ENABLE_PROMETHEUS"
+    Default=""
+    Mode=""
+    Description="See docs for more information. Leave blank to disable. Default is blank"
+    Type="Variable"
+    Display="always"
+    Required="false"
+    Mask="false" />
+
+  <Config
+    Name="UMASK"
+    Target="UMASK"
+    Default="000"
+    Mode=""
+    Description=""
     Type="Variable"
     Display="always"
     Required="false"
